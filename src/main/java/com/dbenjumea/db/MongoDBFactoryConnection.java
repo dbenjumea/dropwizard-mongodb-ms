@@ -8,11 +8,14 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MongoDBFactoryConnection {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MongoDBFactoryConnection.class);
 
     /** The configuration for connect to MongoDB Server.*/
     private MongoDBConnection mongoDBConnection;
